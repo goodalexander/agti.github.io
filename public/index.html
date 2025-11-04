@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="generator" content="Hugo 0.121.1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AGTI - Artificial General Trading Intelligence</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    html,body{margin:0;padding:0;font-family:'Inter',sans-serif;background:radial-gradient(circle at 30% 30%,#131313 0%,#000 80%);color:#fff;overflow-x:hidden}
+
+     
+    header{background:rgba(0,0,0,.65);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08);padding:1.4rem 2rem;position:sticky;top:0;z-index:100;display:flex;justify-content:space-between;align-items:center}
+    .brand-name{font-family:'Orbitron',sans-serif;font-size:1.8rem;text-transform:uppercase;letter-spacing:.16em;background:linear-gradient(90deg,#fff,#bbb);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .nav-links{display:flex;gap:2rem}
+    .nav-link{font-size:.85rem;color:#aaa;text-decoration:none;letter-spacing:1px;text-transform:uppercase;position:relative;transition:.3s}
+    .nav-link::after{content:"";position:absolute;bottom:-4px;left:0;width:0;height:2px;background:#fff;transition:.3s}
+    .nav-link:hover::after{width:100%}.nav-link:hover{color:#fff}
+    header::before,header::after{content:"";position:absolute;height:2px;left:0;right:0;background:linear-gradient(to right,transparent,#fff,transparent)}
+    header::before{top:0}header::after{bottom:0}
+    .hamburger{display:none}
+    @media(max-width:768px){.nav-links{display:none}.hamburger{display:block}}
+
+     
+    .hero{padding:100px 20px 90px;text-align:center}
+
+     
+    .hero-logo-container{width:400px;height:300px;margin:0 auto 60px;position:relative;display:flex;align-items:center;justify-content:center}
+
+     
+    .hero-logo{position:absolute;width:100px;height:100px;z-index:10;filter:drop-shadow(0 0 30px rgba(255,255,255,.3))}
+    
+     
+    .data-flow-effects{position:absolute;inset:0;pointer-events:none;z-index:5}
+    .hero-logo svg{width:100%;height:100%}
+    
+     
+    .iris-fibers{animation:fibersRotate 20s linear infinite;transform-origin:50px 50px}
+    @keyframes fibersRotate{
+      from{transform:rotate(0deg)}
+      to{transform:rotate(360deg)}
+    }
+    
+     
+    .power-ring-1{animation:ringPulse1 3s ease-in-out infinite;transform-origin:50px 50px}
+    .power-ring-2{animation:ringPulse2 3s ease-in-out infinite;animation-delay:0.3s;transform-origin:50px 50px}
+    .power-ring-3{animation:ringPulse3 3s ease-in-out infinite;animation-delay:0.6s;transform-origin:50px 50px}
+    @keyframes ringPulse1{
+      0%,100%{opacity:0.4;transform:scale(1)}
+      50%{opacity:0.7;transform:scale(1.05)}
+    }
+    @keyframes ringPulse2{
+      0%,100%{opacity:0.4;transform:scale(1)}
+      50%{opacity:0.7;transform:scale(1.1)}
+    }
+    @keyframes ringPulse3{
+      0%,100%{opacity:0.4;transform:scale(1)}
+      50%{opacity:0.7;transform:scale(1.15)}
+    }
+    
+     
+    .neural-path{animation:neuralPulse 4s ease-in-out infinite;transform-origin:50px 50px}
+    .np-1{animation-delay:0s}
+    .np-2{animation-delay:0.5s}
+    .np-3{animation-delay:1s}
+    .np-4{animation-delay:1.5s}
+    @keyframes neuralPulse{
+      0%,100%{opacity:0.2}
+      50%{opacity:0.6}
+    }
+    
+     
+    .connection-node{animation:nodeGlow 3s ease-in-out infinite}
+    .cn-1,.cn-5,.cn-9{animation-delay:0s}
+    .cn-2,.cn-6,.cn-10{animation-delay:0.4s}
+    .cn-3,.cn-7,.cn-11{animation-delay:0.8s}
+    .cn-4,.cn-8,.cn-12{animation-delay:1.2s}
+    @keyframes nodeGlow{
+      0%,100%{opacity:0.3;r:1}
+      50%{opacity:0.8;r:2}
+    }
+    
+     
+    .data-point{opacity:0}
+    .dp-left-1,.dp-left-2,.dp-left-3{animation:moveLeft 3s linear infinite}
+    .dp-right-1,.dp-right-2,.dp-right-3{animation:moveRight 3s linear infinite}
+    .dp-top-1,.dp-top-2,.dp-top-3{animation:moveDown 3s linear infinite}
+    .dp-bottom-1,.dp-bottom-2,.dp-bottom-3{animation:moveUp 3s linear infinite}
+    
+    @keyframes moveLeft{
+      from{transform:translateX(0)}
+      to{transform:translateX(200px);opacity:0}
+    }
+    @keyframes moveRight{
+      from{transform:translateX(0)}
+      to{transform:translateX(-200px);opacity:0}
+    }
+    @keyframes moveDown{
+      from{transform:translateY(0)}
+      to{transform:translateY(150px);opacity:0}
+    }
+    @keyframes moveUp{
+      from{transform:translateY(0)}
+      to{transform:translateY(-150px);opacity:0}
+    }
+    
+     
+    .live-data{animation:dataAppear 4s ease-in-out infinite}
+    .ld-1,.ld-4{animation-delay:0s}
+    .ld-2,.ld-5{animation-delay:0.5s}
+    .ld-3,.ld-6{animation-delay:1s}
+    @keyframes dataAppear{
+      0%,20%{opacity:0;transform:scale(0.8)}
+      30%,70%{opacity:0.4;transform:scale(1)}
+      80%,100%{opacity:0;transform:scale(0.8)}
+    }
+    
+     
+    .order-depth{animation:depthPulse 5s ease-in-out infinite}
+    .od-1,.od-4{animation-delay:0s}
+    .od-2,.od-5{animation-delay:0.2s}
+    .od-3,.od-6{animation-delay:0.4s}
+    @keyframes depthPulse{
+      0%,100%{opacity:0.15;transform:scaleX(1)}
+      50%{opacity:0.3;transform:scaleX(1.1)}
+    }
+    
+     
+    .tick-data{animation:tickFlash 2s ease-in-out infinite}
+    .td-1,.td-4{animation-delay:0s}
+    .td-2,.td-5{animation-delay:0.3s}
+    .td-3,.td-6{animation-delay:0.6s}
+    @keyframes tickFlash{
+      0%,100%{opacity:0.4;r:0.5}
+      50%{opacity:0.8;r:1}
+    }
+    
+     
+    .analysis-layer{animation:analysisShimmer 6s ease-in-out infinite}
+    .al-1{animation-delay:0s}
+    .al-2{animation-delay:1s}
+    .al-3{animation-delay:2s}
+    @keyframes analysisShimmer{
+      0%,100%{opacity:0.1;transform:rotate(0deg)}
+      50%{opacity:0.3;transform:rotate(5deg)}
+    }
+    
+     
+    .hero h1{font-size:clamp(36px,6vw,72px);font-weight:700;background:linear-gradient(90deg,#fff,#aaa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:30px;animation:fadeUp .9s ease-out}
+    .hero p{font-size:1.25rem;color:#aaa;max-width:600px;margin:0 auto 50px;line-height:1.6;animation:fadeUp 1.1s ease-out}
+
+    .action-grid{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;animation:fadeUp 1.25s ease-out}
+    .action-button{padding:16px 36px;font-size:14px;font-weight:600;letter-spacing:1px;background:linear-gradient(90deg,rgba(255,255,255,.25),rgba(255,255,255,.07));border:1px solid rgba(255,255,255,.35);color:#fff;text-decoration:none;border-radius:999px;transition:.3s;position:relative;overflow:hidden}
+    .action-button::before{content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);transition:.5s}
+    .action-button:hover::before{left:100%}
+    .action-button:hover{background:rgba(255,255,255,.18);transform:translateY(-2px);box-shadow:0 0 22px rgba(255,255,255,.25)}
+
+    @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+     
+    .features{padding:100px 20px;position:relative}
+    .features::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent 10%,rgba(255,255,255,.1) 50%,transparent 90%)}
+    
+    .section-header{text-align:center;margin-bottom:80px}
+    .section-header h2{font-family:'Orbitron',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:600;letter-spacing:.12em;background:linear-gradient(90deg,#fff,#bbb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:0}
+    
+    .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px;max-width:1200px;margin:0 auto}
+    
+    .feature-card{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:40px;position:relative;overflow:hidden;transition:all .4s cubic-bezier(.4,0,.2,1)}
+    .feature-card::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(255,255,255,.06) 0%,transparent 70%);opacity:0;transition:.4s}
+    .feature-card:hover{transform:translateY(-8px);border-color:rgba(255,255,255,.2);background:rgba(255,255,255,.04);box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 40px rgba(255,255,255,.08)}
+    .feature-card:hover::before{opacity:1}
+    
+    .feature-icon{width:60px;height:60px;margin-bottom:24px;position:relative}
+    .feature-icon svg{width:100%;height:100%;stroke:#fff;stroke-width:1.5;fill:none;opacity:.8;transition:.3s}
+    .feature-card:hover .feature-icon svg{opacity:1;filter:drop-shadow(0 0 20px rgba(255,255,255,.4))}
+    
+    .feature-card h3{font-size:1.5rem;font-weight:600;margin-bottom:16px;color:#fff;letter-spacing:.5px}
+    .feature-card p{color:#888;line-height:1.6;font-size:0.95rem;position:relative;z-index:1;transition:.3s}
+    .feature-card:hover p{color:#aaa}
+
+     
+    .contact-section{max-width:800px;margin:0 auto 100px;padding:60px 32px;border:1px solid rgba(255,255,255,.1);border-radius:24px;background:rgba(255,255,255,.02);backdrop-filter:blur(6px);text-align:center}
+    .contact-section h2{font-size:2rem;margin-bottom:20px;font-weight:600;background:linear-gradient(90deg,#fff,#aaa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .contact-section p{color:#aaa;margin-bottom:40px;line-height:1.6;font-size:1.1rem}
+    
+    .contact-form{display:flex;flex-direction:column;gap:20px;max-width:600px;margin:0 auto}
+    .form-row{display:flex;gap:20px}
+    .form-row input{flex:1}
+    .contact-form input,.contact-form textarea{padding:16px 24px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);color:#fff;font-size:1rem;outline:none;transition:.3s;font-family:inherit}
+    .contact-form input::placeholder,.contact-form textarea::placeholder{color:#666}
+    .contact-form input:focus,.contact-form textarea:focus{border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.06)}
+    .contact-form textarea{resize:vertical;min-height:120px}
+    .contact-form button{padding:16px 40px;border:none;border-radius:12px;background:linear-gradient(90deg,#fff,#ddd);color:#000;font-weight:700;font-size:1rem;letter-spacing:.8px;cursor:pointer;transition:.3s;margin-top:10px}
+    .contact-form button:hover{transform:translateY(-2px);box-shadow:0 0 30px rgba(255,255,255,.3)}
+
+    @media(max-width:768px){
+      .hero h1{font-size:2rem}
+      .hero p{font-size:1rem}
+      .action-grid{flex-direction:column;align-items:center}
+      .features-grid{grid-template-columns:1fr;gap:30px}
+      .feature-card{padding:30px}
+      .form-row{flex-direction:column;gap:15px}
+      .hero-logo-container{width:300px;height:225px}
+      .hero-logo{width:75px;height:75px}
+    }
+  </style>
+</head>
+<body>
+  
+  <header>
+    <div class="brand-name">AGTI</div>
+    <nav class="nav-links">
+      <a href="#features" class="nav-link">Features</a>
+      <a href="#solutions" class="nav-link">Solutions</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </header>
+
+  
+  <section class="hero">
+    <div class="hero-logo-container">
+      
+      <div class="hero-logo" aria-label="AGTI Logo">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          
+          <path d="M 50 25 Q 75 50 50 75 Q 25 50 50 25" stroke="white" stroke-width="1.5" fill="none" opacity="0.9"/>
+          
+          
+          <circle cx="50" cy="50" r="18" stroke="white" stroke-width="1" fill="none" opacity="0.8" class="power-ring-1"/>
+          
+          
+          <circle cx="50" cy="50" r="14" stroke="white" stroke-width="0.8" fill="none" opacity="0.6" class="power-ring-2"/>
+          
+          
+          <circle cx="50" cy="50" r="10" stroke="white" stroke-width="0.6" fill="none" opacity="0.4" class="power-ring-3"/>
+          
+          
+          <g class="iris-fibers" opacity="0.5">
+            <line x1="50" y1="32" x2="50" y2="40" stroke="white" stroke-width="0.5"/>
+            <line x1="50" y1="60" x2="50" y2="68" stroke="white" stroke-width="0.5"/>
+            <line x1="32" y1="50" x2="40" y2="50" stroke="white" stroke-width="0.5"/>
+            <line x1="60" y1="50" x2="68" y2="50" stroke="white" stroke-width="0.5"/>
+            <line x1="38" y1="38" x2="44" y2="44" stroke="white" stroke-width="0.5"/>
+            <line x1="56" y1="56" x2="62" y2="62" stroke="white" stroke-width="0.5"/>
+            <line x1="62" y1="38" x2="56" y2="44" stroke="white" stroke-width="0.5"/>
+            <line x1="44" y1="56" x2="38" y2="62" stroke="white" stroke-width="0.5"/>
+          </g>
+          
+          
+          <circle cx="50" cy="50" r="6" fill="white" opacity="0.9"/>
+          <circle cx="50" cy="50" r="4" fill="rgba(255,255,255,0.3)"/>
+          
+          
+          <circle cx="55" cy="45" r="2" fill="white" opacity="0.8"/>
+        </svg>
+      </div>
+      
+      
+      <div class="data-flow-effects">
+        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+          
+          <g class="neural-paths" opacity="0.3">
+            <path d="M200 150 L100 50 M200 150 L300 50" class="neural-path np-1" stroke="white" stroke-width="0.5" fill="none"/>
+            <path d="M200 150 L100 250 M200 150 L300 250" class="neural-path np-2" stroke="white" stroke-width="0.5" fill="none"/>
+            <path d="M200 150 L50 150 M200 150 L350 150" class="neural-path np-3" stroke="white" stroke-width="0.5" fill="none"/>
+            <path d="M200 150 L150 50 M200 150 L250 250" class="neural-path np-4" stroke="white" stroke-width="0.5" fill="none"/>
+          </g>
+          
+          
+          <g class="connection-nodes">
+            <circle cx="100" cy="50" r="1" fill="white" class="connection-node cn-1"/>
+            <circle cx="300" cy="50" r="1" fill="white" class="connection-node cn-2"/>
+            <circle cx="100" cy="250" r="1" fill="white" class="connection-node cn-3"/>
+            <circle cx="300" cy="250" r="1" fill="white" class="connection-node cn-4"/>
+            <circle cx="50" cy="150" r="1" fill="white" class="connection-node cn-5"/>
+            <circle cx="350" cy="150" r="1" fill="white" class="connection-node cn-6"/>
+            <circle cx="150" cy="50" r="1" fill="white" class="connection-node cn-7"/>
+            <circle cx="250" cy="250" r="1" fill="white" class="connection-node cn-8"/>
+            <circle cx="150" cy="100" r="1" fill="white" class="connection-node cn-9"/>
+            <circle cx="250" cy="100" r="1" fill="white" class="connection-node cn-10"/>
+            <circle cx="150" cy="200" r="1" fill="white" class="connection-node cn-11"/>
+            <circle cx="250" cy="200" r="1" fill="white" class="connection-node cn-12"/>
+          </g>
+          
+          
+          <g class="data-particles">
+            
+            <circle cx="0" cy="150" r="2" fill="white" class="data-point dp-left-1"/>
+            <circle cx="0" cy="100" r="1.5" fill="white" class="data-point dp-left-2" style="animation-delay: 1s"/>
+            <circle cx="0" cy="200" r="1.5" fill="white" class="data-point dp-left-3" style="animation-delay: 2s"/>
+            
+            
+            <circle cx="400" cy="150" r="2" fill="white" class="data-point dp-right-1"/>
+            <circle cx="400" cy="100" r="1.5" fill="white" class="data-point dp-right-2" style="animation-delay: 1s"/>
+            <circle cx="400" cy="200" r="1.5" fill="white" class="data-point dp-right-3" style="animation-delay: 2s"/>
+            
+            
+            <circle cx="200" cy="0" r="2" fill="white" class="data-point dp-top-1"/>
+            <circle cx="150" cy="0" r="1.5" fill="white" class="data-point dp-top-2" style="animation-delay: 1.5s"/>
+            <circle cx="250" cy="0" r="1.5" fill="white" class="data-point dp-top-3" style="animation-delay: 0.5s"/>
+            
+            
+            <circle cx="200" cy="300" r="2" fill="white" class="data-point dp-bottom-1"/>
+            <circle cx="150" cy="300" r="1.5" fill="white" class="data-point dp-bottom-2" style="animation-delay: 1.5s"/>
+            <circle cx="250" cy="300" r="1.5" fill="white" class="data-point dp-bottom-3" style="animation-delay: 0.5s"/>
+          </g>
+          
+          
+          <g class="market-data" opacity="0.3">
+            
+            <rect x="80" y="120" width="4" height="20" fill="white" class="live-data ld-1"/>
+            <rect x="90" y="110" width="4" height="30" fill="white" class="live-data ld-2"/>
+            <rect x="100" y="115" width="4" height="25" fill="white" class="live-data ld-3"/>
+            <rect x="300" y="120" width="4" height="20" fill="white" class="live-data ld-4"/>
+            <rect x="310" y="110" width="4" height="30" fill="white" class="live-data ld-5"/>
+            <rect x="320" y="115" width="4" height="25" fill="white" class="live-data ld-6"/>
+            
+            
+            <rect x="120" y="140" width="30" height="2" fill="white" class="order-depth od-1"/>
+            <rect x="120" y="145" width="25" height="2" fill="white" class="order-depth od-2"/>
+            <rect x="120" y="150" width="20" height="2" fill="white" class="order-depth od-3"/>
+            <rect x="250" y="140" width="30" height="2" fill="white" class="order-depth od-4"/>
+            <rect x="255" y="145" width="25" height="2" fill="white" class="order-depth od-5"/>
+            <rect x="260" y="150" width="20" height="2" fill="white" class="order-depth od-6"/>
+            
+            
+            <circle cx="130" cy="80" r="0.5" fill="white" class="tick-data td-1"/>
+            <circle cx="140" cy="85" r="0.5" fill="white" class="tick-data td-2"/>
+            <circle cx="150" cy="78" r="0.5" fill="white" class="tick-data td-3"/>
+            <circle cx="250" cy="220" r="0.5" fill="white" class="tick-data td-4"/>
+            <circle cx="260" cy="215" r="0.5" fill="white" class="tick-data td-5"/>
+            <circle cx="270" cy="222" r="0.5" fill="white" class="tick-data td-6"/>
+          </g>
+          
+          
+          <g class="analysis-overlays" opacity="0.2">
+            <path d="M150 100 Q200 120 250 100" stroke="white" stroke-width="0.5" fill="none" class="analysis-layer al-1"/>
+            <path d="M150 200 Q200 180 250 200" stroke="white" stroke-width="0.5" fill="none" class="analysis-layer al-2"/>
+            <circle cx="200" cy="150" r="40" stroke="white" stroke-width="0.5" fill="none" class="analysis-layer al-3"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <h1>Artificial General<br>Trading Intelligence</h1>
+    <p>Premium Institutional AI Driven Trading and Investment Management Solutions</p>
+  </section>
+
+  
+  <section class="signup contact-section">
+    <h2>Contact Us</h2>
+    <p>Get in touch with our team for inquiries about our AI trading solutions and institutional services.</p>
+    <form class="contact-form" onsubmit="event.preventDefault();alert('Thank you for your message! We\'ll get back to you soon.');">
+      <div class="form-row">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+      </div>
+      <input type="text" placeholder="Company/Institution" required>
+      <textarea placeholder="Tell us about your needs..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <script>
+     
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+    
+    
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>

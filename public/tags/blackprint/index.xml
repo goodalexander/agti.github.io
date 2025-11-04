@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>blackprint on goodalexander</title>
+    <link>https://postfiatorg.github.io/tags/blackprint/</link>
+    <description>Recent content in blackprint on goodalexander</description>
+    <image>
+      <title>goodalexander</title>
+      <url>https://postfiatorg.github.io/papermod-cover.png</url>
+      <link>https://postfiatorg.github.io/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 28 Dec 2023 11:21:29 +0000</lastBuildDate><atom:link href="https://postfiatorg.github.io/tags/blackprint/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Blackprint - A Manifesto for the New World Order</title>
+      <link>https://postfiatorg.github.io/posts/the-blackprint/</link>
+      <pubDate>Thu, 28 Dec 2023 11:21:29 +0000</pubDate>
+      
+      <guid>https://postfiatorg.github.io/posts/the-blackprint/</guid>
+      <description>how to survive and thrive in the post nation-state AI driven reality</description>
+    </item>
+    
+  </channel>
+</rss>
